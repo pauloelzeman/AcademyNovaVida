@@ -32,6 +32,14 @@ Execute os seguintes comandos no terminal ou na janela Package Manager Console:
 4. Conferir o Banco de Dados
 Após aplicar as migrações, verifique no SQL Server Management Studio (ou ferramenta equivalente) se o banco AcademyNovaVida e suas tabelas foram criados.
 
+## Teste de Importação de Dados de Alunos
+Para facilitar o processo de teste de importação de dados de alunos, foi adicionado o arquivo Alunos_importacao.txt.
+Este arquivo contém dados de exemplo que podem ser utilizados para testar a funcionalidade de importação do sistema.
+- Instruções de uso:
+1. Baixe o arquivo Alunos_importacao.txt presente no repositório.
+Utilize este arquivo como fonte para importar os dados de alunos para o sistema de acordo com a lógica de importação implementada.
+Este arquivo serve como exemplo e pode ser modificado conforme necessário para testar diferentes cenários de importação.
+
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 Se precisar de mais ajustes ou melhorias no README, avise! 😊
