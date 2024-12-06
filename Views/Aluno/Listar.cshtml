@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AcademyNovaVida.Models.Aluno>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Academy Nova Vida</h1>
+</div>
+
+<h1>Lista de Alunos</h1>
+<hr/>
+<form asp-action="Importar" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="professorId" value="@ViewData["ProfessorId"]" />
+    <label for="file">Importar Alunos</label>
+    <br />
+    <input type="file" id="file" name="file" class="btn btn-green"/>
+    <button type="submit" class="btn btn-orange">Importar</button>
+</form>
+<div>
+    <a asp-controller="Home" asp-action="Index">Voltar à lista</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Mensalidade</th>
+            <th>Data de Vencimento</th>
+            <th>Professor</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model)
+        {
+            <tr id="aluno-@aluno.Id">
+                <td>@aluno.Nome</td>
+                <td>@aluno.Mensalidade.ToString("C2")</td>
+                <td>@aluno.DataVencimento.ToString("dd/MM/yyyy")</td>
+                <td>@aluno.Professor.Nome</td>
+                <td>
+                    <a href="@Url.Action("Excluir", new {aluno.Id})" class="excluir">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    document.querySelectorAll('.excluir').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            const alunoId = this.href.split('/').pop();
+
+            //Confirm opcional -
+            if (confirm("Você tem certeza que deseja excluir este aluno?")) {
+                fetch(`/Aluno/Excluir/${alunoId}`, {
+                    method: 'DELETE'
+                }).then(response => {
+                    if (response.ok) {
+                        document.getElementById('aluno-' + alunoId).remove(); // Remove a linha da tabela
+                    }
+                });
+            }
+        });
+    });
+</script>

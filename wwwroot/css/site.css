@@ -1,0 +1,66 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Define o estilo para o botão na cor laranja */
+.btn-orange {
+    color: white; /* Cor do texto */
+    background-color: orange; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+    padding: 09px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Mostra o ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+/* Define o estilo ao passar o mouse */
+.btn-orange:hover {
+    background-color: darkorange; /* Torna o botão mais escuro ao passar o mouse */
+}
+
+/* Define o estilo ao clicar */
+.btn-orange:active {
+    background-color: orangered; /* Cor ao pressionar o botão */
+}
+
+/* Define o estilo para o botão na cor verde */
+.btn-green {
+    color: black; /* Cor do texto */
+    background-color: green; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+    padding: 09px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Mostra o ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+    /* Define o estilo ao passar o mouse */
+    .btn-green:hover {
+        background-color: darkgreen; /* Torna o botão mais escuro ao passar o mouse */
+    }
+
+    /* Define o estilo ao clicar */
+    .btn-green:active {
+        background-color: greenyellow; /* Cor ao pressionar o botão */
+    }

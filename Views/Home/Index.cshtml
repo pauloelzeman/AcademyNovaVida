@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AcademyNovaVida.Models.Professor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Academy Nova Vida</h1>
+</div>
+
+<h1>Professores</h1>
+<hr />
+<p>
+    <a asp-controller="Professor" asp-action="Cadastro" class="btn btn-orange">Cadastrar Professor</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome do Professor</th>
+            <th>Lista Alunos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var professor in Model)
+        {
+            <tr>
+                <td>
+                    @professor.Nome
+                </td>
+                <td>
+                    <a asp-controller="Aluno" asp-action="Listar" asp-route-professorId="@professor.Id">Ver Alunos</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
