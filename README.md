@@ -28,6 +28,8 @@ No arquivo appsettings.json do projeto, configure a string de conexão para o ba
 O projeto utiliza o Entity Framework Core para gerenciar o banco de dados.
 Execute os seguintes comandos no terminal ou na janela Package Manager Console:
 - Adicionar o banco ao servidor: dotnet ef database update
+- Configuração do Banco via Script SQL
+Caso deseje configurar o banco manualmente, você pode usar o Script SQL que encontrase dentro da pasta Script do Repositorio para criar o banco e as tabelas necessárias.
 
 4. Conferir o Banco de Dados
 Após aplicar as migrações, verifique no SQL Server Management Studio (ou ferramenta equivalente) se o banco AcademyNovaVida e suas tabelas foram criados.
@@ -36,7 +38,7 @@ Após aplicar as migrações, verifique no SQL Server Management Studio (ou ferr
 Para facilitar o processo de teste de importação de dados de alunos, foi adicionado o arquivo Alunos_importacao.txt.
 Este arquivo contém dados de exemplo que podem ser utilizados para testar a funcionalidade de importação do sistema.
 - Instruções de uso:
-1. Baixe o arquivo Alunos_importacao.txt presente no repositório.
+1. Baixe o arquivo Alunos_importacao.txt presente no repositório dentro da pasta FileImportTest.
 Utilize este arquivo como fonte para importar os dados de alunos para o sistema de acordo com a lógica de importação implementada.
 Este arquivo serve como exemplo e pode ser modificado conforme necessário para testar diferentes cenários de importação.
 
