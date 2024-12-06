@@ -1,0 +1,14 @@
+João da Silva||200,00||15/12/2024
+Maria Oliveira||250,00||10/12/2024
+Carlos Souza||180,00||05/12/2024
+Ana Pereira||220,00||12/12/2024
+Paula Santos||210,00||18/12/2024
+Renato Lima||230,00||25/12/2024
+Luiza Rocha||240,00||20/12/2024
+Gabriel Costa||190,00||08/12/2024
+Fernanda Silva||260,00||03/12/2024
+Ricardo Almeida||210,00||16/12/2024
+Patricia Ferreira||230,00||22/12/2024
+Marcio Oliveira||220,00||14/12/2024
+Carla Martins||200,00||07/12/2024
+Eduardo Barbosa||240,00||23/12/2024
